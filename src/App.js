@@ -3,7 +3,10 @@ import Layout from './components/common/Layout';
 import About from './pages/About';
 import Article from './pages/Article';
 import Articles from './pages/Articles';
+import NotFound from './pages/404/NotFound';
 import Home from './pages/Home';
+import Login from './pages/loginPage/Login';
+import MyPage from './pages/userPage/MyPage';
 import Profile from './pages/Profile';
 
 const App = () => {
@@ -22,13 +25,18 @@ const App = () => {
       {/* path parameter는 2개인 경우 경로값에 /profiles/:username/:field와 같은 형태로 설정 */}
       <Route path="/articles" element={<Articles />}>
         <Route path=":id" element={<Article />} />
-      </Route>
-      
       {/* Articles, Article 페이지 라우트 추가
          게시글 목록 페이지 ArticleList 컴포넌트를 따로 만들어서 각 페이지 컴포넌트에서 사용하는
          기존 방식의 라우트보다는 아래와 같이 중첩된 라우트를 사용하는 것이 좋음
 
       ※ 중첩 라우트 컴포넌트 지정시 여는 태그의 끝 기호를 알맞게 수정해주어야 함 */}
+      </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/mypage" element={<MyPage />} />
+      <Route path="*" element={<NotFound />} />
+      {/* 상단의 모든 라우트들의 규칙을 모두 확인하고, 일치하는 라우트가 없다면 이 라우트가 화면에 나타나게 라우팅 */}
+
+
 
     </Routes>
 
@@ -48,18 +56,4 @@ const App = () => {
    <Route path="주소규칙" element={보여줄 컴포넌트 JSX} />
 
 
-   Route 컴포넌트는 Routes 컴포넌트로 감싸주어서 사용해야 함
-
-
-
-   ▷ <Link> 컴포넌트
-
-
-   <Link to="경로">링크 이름</Link>
-   
-   리액트 라우터를 사용하는 프로젝트에서는
-   a 태그를 클릭하여 페이지를 이동할 때 브라우저에서는 페이지를 새로 불러오게 되기 때문에
-   HTML에서처럼 a 태그를 바로 사용하여서는 안 됨
-   
-   Link 컴포넌트 역시 a 태그를 사용하긴 하지만, 페이지를 새로 불러오는 것을 막고 History API를 통해
-   브라우저 주소의 경로만 바꾸는 기능이 내장되어 있음 */
+   Route 컴포넌트는 Routes 컴포넌트로 감싸주어서 사용해야 함 */

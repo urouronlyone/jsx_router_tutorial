@@ -10,6 +10,9 @@ const Home = () => {
             <Link to="/about">소개 페이지</Link>
           </li>
           <li>
+            <Link to="/mypage">마이 페이지</Link>
+          </li>
+          <li>
             <Link to="/profiles/director">병원장의 프로필</Link>
           </li>
           <li>

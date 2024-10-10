@@ -14,7 +14,7 @@ const data = {
 const Profile = () => {
     const params = useParams();            
     const profile = data[params.username];
-// URL 파라미터는 useParams라는 후크를 사용해 객체 형태로 조회할 수 있음
+// URL 파라미터는 useParams라는 훅을 사용해 객체 형태로 조회할 수 있음
 // URL 파라미터의 이름은 라우트 설정을 할 때 Route 컴포넌트의 path props를 통해 설정함
 
     return (
@@ -42,16 +42,3 @@ const Profile = () => {
 };
 
 export default Profile;
-
-/* 
-
-   
-
-
-
-
-
-*/
-
-
-

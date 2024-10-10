@@ -18,7 +18,7 @@ export default About;
 
 /*
 
-useLocation 후크 사용시 location 객체를 반환하는데,
+useLocation 훅 호출하여 사용시 location 객체를 리턴하는데,
 
 location 객체는 현재 사용자가 보고있는 페이지의 데이터를 지님
    
