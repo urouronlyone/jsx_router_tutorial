@@ -1,0 +1,10 @@
+{
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "imhome",
+		"body": [
+					"import Home from './pages/Home';"
+		],
+		"description": "Log output to console"
+	}
+}

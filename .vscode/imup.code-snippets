@@ -1,0 +1,10 @@
+{
+	"Print to console": {
+		"scope": "javascript,typescript",
+		"prefix": "imup",
+		"body": [
+					"import { useParams } from 'react-router-dom';"
+		],
+		"description": "Log output to console"
+	}
+}
